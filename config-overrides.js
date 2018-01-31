@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const { getLoader, loaderNameMatches } = require("react-app-rewired");
 
 const rewireBabelLoader = require("react-app-rewire-babel-loader");
 
@@ -7,14 +8,20 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = function override(config, env) {
-  // white-list some npm modules to the babel-loader pipeline
-  // see: https://webpack.js.org/configuration/module/#rule-include
+  console.log(JSON.stringify(config, null, 2));
 
-  config = rewireBabelLoader.include(
-    config,
-    resolveApp("node_modules/react-native-elements"),
-    resolveApp("node_modules/react-native-vector-icons")
-  );
+  const vectIcons = resolveApp("node_modules/react-native-vector-icons");
+  const rne = resolveApp("node_modules/react-native-elements");
+
+  // const fileLoader = getLoader(config.module.rules, rule =>
+  //   loaderNameMatches(rule, "file-loader")
+  // );
+  // if (!fileLoader) throw new Error("can't find file-loader");
+  // if (!fileLoader.include) fileLoader.include = [vectIcons];
+  // else fileLoader.include.push(vectIcons);
+
+  // transpile libraries
+  config = rewireBabelLoader.include(config, rne, vectIcons);
 
   return config;
 };
