@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Button, ButtonGroup, Icon } from "react-native-elements";
 
 class Buttons extends Component {
