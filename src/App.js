@@ -1,17 +1,25 @@
 // @flow
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, StatusBar } from "react-native";
+import { Text } from "react-native-elements";
+import ButtonsExample from "./Buttons";
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.app}>
+        <StatusBar hidden />
         <View style={styles.appHeader}>
-          <Text style={styles.appTitle}>Welcome to React</Text>
+          <Text h4 style={styles.appTitle}>
+            React Native Elements
+          </Text>
+          <Text h5 style={styles.appTitle}>
+            Cross-Platform Example
+          </Text>
         </View>
-        <Text style={styles.appIntro}>
-          To get started, edit src/App.js and save to reload.
-        </Text>
+        <ScrollView>
+          <ButtonsExample />
+        </ScrollView>
       </View>
     );
   }
@@ -22,20 +30,18 @@ const styles = StyleSheet.create({
     flex: 1
   },
   appHeader: {
-    flex: 1,
+    height: 150,
     backgroundColor: "#222",
-    padding: 20,
+    padding: 10,
     justifyContent: "center",
     alignItems: "center"
   },
   appTitle: {
-    fontSize: 16,
+    textAlign: "center",
     color: "white"
   },
-  appIntro: {
-    flex: 2,
-    fontSize: 30,
-    textAlign: "center"
+  container: {
+    flex: 5
   }
 });
 
