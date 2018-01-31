@@ -2,11 +2,13 @@
 
 ## A React Native Elements example app for android, iOS, and web that shares a single codebase.
 
-"Write once, run anywhere" - React, React Native, and React Native Web provide a foundation for building truly cross-platform applications.
+### "Write once, run anywhere... including UI"
 
-React Native Elements, originally created for React Native, now supports react-native-web, allowing developers to implement UIs once, for all platforms.
+React, React Native, and React Native Web provide a foundation for building truly cross-platform applications.
 
-Current mobile devices have blurred the lines between mobile, web, and desktop. Mobile UI designs must account for the same sizing freedoms as a desktop web browser. React Native Elements allows use of single UI library.
+React Native Elements, originally created for React Native, also supports react-native-web, allowing developers to implement UIs once, for all platforms.
+
+Current mobile devices have blurred the lines between mobile, web, and desktop. Mobile UI designs must account for the same sizing freedoms as a desktop web browser. React Native Elements allows use of single UI component library.
 
 ### Details:
 
