@@ -54,9 +54,9 @@ react-app-rewired allows additions to the webpack configuration. Via the /config
 
 #### Other cross-platform libraries
 
-An example of another library which supports mobile and web is svgs.
+An example of another library which supports mobile and web is [svgs](https://github.com/godaddy/svgs).
 
-Expo includes react-native-svg built-in. HTML5 supports svg elements as a W3C recommendation. The [svgs](https://github.com/godaddy/svgs) library provides a common interface, as shown in App.js:
+Expo includes react-native-svg built-in. HTML5 supports svg elements as a W3C recommendation. The svgs library provides a common interface, as shown in App.js:
 
 ```js
 <Svg width={80} height={50} viewBox="0 0 841.9 595.3">
