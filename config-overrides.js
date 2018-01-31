@@ -8,20 +8,20 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = function override(config, env) {
-  console.log(JSON.stringify(config, null, 2));
+  // console.log(JSON.stringify(config, null, 2));
 
-  const vectIcons = resolveApp("node_modules/react-native-vector-icons");
-  const rne = resolveApp("node_modules/react-native-elements");
+  const vectorIcons = resolveApp("node_modules/react-native-vector-icons");
+  const elements = resolveApp("node_modules/react-native-elements");
 
   // const fileLoader = getLoader(config.module.rules, rule =>
   //   loaderNameMatches(rule, "file-loader")
   // );
   // if (!fileLoader) throw new Error("can't find file-loader");
-  // if (!fileLoader.include) fileLoader.include = [vectIcons];
-  // else fileLoader.include.push(vectIcons);
+  // if (!fileLoader.include) fileLoader.include = [vectorIcons];
+  // else fileLoader.include.push(vectorIcons);
 
   // transpile libraries
-  config = rewireBabelLoader.include(config, rne, vectIcons);
+  config = rewireBabelLoader.include(config, elements, vectorIcons);
 
   return config;
 };

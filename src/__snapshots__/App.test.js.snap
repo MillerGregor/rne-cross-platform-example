@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <StatusBar
+    animated={false}
+    hidden={true}
+    showHideTransition="fade"
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#222",
+        "height": 150,
+        "justifyContent": "center",
+        "padding": 10,
+      }
+    }
+  >
+    <TextElement
+      h4={true}
+      style={
+        Object {
+          "color": "#aaa",
+        }
+      }
+    >
+      React Native Elements
+    </TextElement>
+    <TextElement
+      h5={true}
+      style={
+        Object {
+          "color": "#aaa",
+        }
+      }
+    >
+      Cross-Platform Example
+    </TextElement>
+  </View>
+  <ScrollView>
+    <Buttons />
+  </ScrollView>
+</View>
+`;
