@@ -12,7 +12,8 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "prepush": "node ./scripts/pre-push-hook"
+    "prepush": "node ./scripts/pre-push-hook",
+    "precommit": "echo 'hello'"
   },
   "dependencies": {
     "expo": "^25.0.0",
