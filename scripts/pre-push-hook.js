@@ -3,7 +3,8 @@ const path = require("path");
 
 const ALLOW_PUSH = ".allowPush";
 
-console.log(env.GIT_PARAMS);
+console.log(process.env.GIT_PARAMS);
+
 if (!fs.existsSync(path.resolve(__dirname, ALLOW_PUSH))) {
   throw new Error(`*** ${ALLOW_PUSH} file not found. push aborted ***`);
 }
