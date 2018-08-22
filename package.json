@@ -11,7 +11,8 @@
     "eject-native": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "prepush": "node ./scripts/pre-push-hook"
   },
   "dependencies": {
     "expo": "^25.0.0",
@@ -32,6 +33,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
     "flow-bin": "^0.64.0",
+    "husky": "^0.14.3",
     "jest": "^22.1.4",
     "jest-expo": "^25.1.0",
     "jsdom": "^11.6.2",
